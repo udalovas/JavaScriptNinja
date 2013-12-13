@@ -1,5 +1,5 @@
 describe('Variables scoping rules', function () {
-        it('should get access to var declared in another block', function () {
+        it('Should get access to var declared in innner block', function () {
             expect(x).toBeUndefined();
             if (window) {
                 var x = 213;
@@ -7,7 +7,7 @@ describe('Variables scoping rules', function () {
             }
             expect(x).toBeDefined();
         });
-        it('shouldn\'t get access to var declared in inner function', function() {
+        it('Shouldn\'t get access to var declared in inner function', function () {
             var x;
             var inner = function () {
                 expect(x).toBeDefined();
